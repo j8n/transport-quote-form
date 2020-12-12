@@ -40,7 +40,7 @@ Then run
   php artisan serve
 ```
 
-1. You can also run ```npm run watch``` for detecting front-end changes automatically.
+You can also run ```npm run watch``` for detecting front-end changes automatically.
 
 
 A live close version to this can be found here: https://form.ouzo.io
