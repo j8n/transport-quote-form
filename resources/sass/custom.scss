@@ -1,0 +1,216 @@
+$categoryButtonPrimaryColor: #d9d9d9;
+$categoryButtonHoverColor: #e9e9e9;
+$categoryButtonColor: #808080;
+$categoryButtonSelectedColor: #404040;
+$categoryButtonHasItemsSelectedColor: #38c172;
+$categoryButtonHasItemsSelectedHoverColor: #48c682;
+
+$objectButtonHoverColor: #e9e9e9;
+$objectButtonQuantityColor: #1DB97A;
+$objectButtonBorderColor: #e0e0e0;
+$objectButtonSelectedColor: #2BF1A0;
+
+$categoriesBorderColor: #f0f0f0;
+
+/*****************************************
+	dashboard basic styles
+*****************************************/
+.page-wrapper {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.page-title {
+	margin-top: 5px;
+}
+
+/*****************************************
+	current app styles
+*****************************************/
+.panel {
+	
+}
+
+/*****************************************
+	category button
+*****************************************/
+.category-btn {
+	font-size: 0;
+	position: relative;
+	text-align: center;
+	border-bottom: 1px solid $categoriesBorderColor;
+	border-right: 1px solid $categoriesBorderColor;
+	width: (100% / 7);
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 15px 0;
+	cursor: pointer;
+	background-color: $categoryButtonPrimaryColor;
+	color: #b0b0b0;
+}
+
+.category-btn:not(.categorySelected):not(.categoryButtonHasItemsSelected):hover {
+	background-color: $categoryButtonHoverColor;
+}
+
+.category-btn:last-child {
+	border-right: none;
+}
+
+.category-btn:first-child {
+	
+}
+
+.category-btn-title {
+	font-size: 10px;
+	color: $categoryButtonColor;
+}
+
+.categorySelected {
+	color: $categoryButtonSelectedColor;
+}
+
+.categorySelected .category-btn-icon {
+	color: $categoryButtonSelectedColor !important;
+}
+
+.categorySelected .category-btn-title {
+	color: $categoryButtonSelectedColor;
+}
+
+.categoryButtonHasItemsSelected {
+	background-color: $categoryButtonHasItemsSelectedColor;
+}
+
+.categoryButtonHasItemsSelected:hover {
+	background-color: $categoryButtonHasItemsSelectedHoverColor;
+}
+
+.category-btn .category-btn-icon {
+	font-size: 24px;
+	color: $categoryButtonColor;
+}
+
+@media only screen and (max-width: 600px) {
+	.category-btn i {
+		font-size: 20px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.category-btn-title {
+		display: none;
+	}
+}
+
+.categories-container {
+	display: flex; flex-wrap: nowrap;
+}
+
+.object-container {
+	max-height: 470px;
+	overflow-y: scroll;
+}
+
+@media only screen and (max-height: 568px) {
+	.object-container {
+		max-height: 300px;
+	}
+}
+
+.object-container-closed {
+	display: none;
+}
+
+/*****************************************
+	object button
+*****************************************/
+.object-btn {
+	text-align: left;
+	font-size: 16px;
+	border-bottom: 1px solid $objectButtonBorderColor;
+}
+
+.object-btn:not(.objectBtnSelected):hover {
+	background-color: $objectButtonHoverColor;
+}
+
+.object-btn-title {
+	font-size: 18px;
+
+}
+
+@media only screen and (max-width: 768px) {
+	.object-btn-title {
+		font-size: 14px;
+	}
+}
+
+.object-btn-quantity {
+	font-size: 20px;
+	color: $objectButtonQuantityColor;
+	font-weight: 400;
+}
+
+.objectBtnSelected {
+	background-color: $objectButtonSelectedColor;
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+
+.object-button-add-button-container {
+	text-align: right;
+	display: flex;
+}
+
+.window {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	background-color: rgba(140, 140, 140, 0.6);
+}
+
+.window-inner {
+	position: relative;
+	margin-top: 60px;
+    height: auto;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media only screen and (max-height: 568px) {
+	.window-inner {
+		margin-top: 10px;
+	}
+}
+
+#the-object-options-card {
+	box-shadow: 1px 1px 4px 5px #909090;
+}
+
+#the-object-options-card-body {
+	overflow-y: scroll;	
+}
+
+@media only screen and (max-height: 568px) {
+	#the-object-options-card-body {
+		
+	}
+}
+
+.object-list-icon {
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.object-list-icon:hover {
+	color: #a0a0a0;
+}
