@@ -62,7 +62,7 @@ class SubmitController extends Controller
 
         // create info csv
         $csvInfo = new CsvWriter($submission->getFolder().'/contactInfo.csv');
-        $infoHeaderRow = ['Επώνυμο', 'Τηλέφωνο', 'Εmail', 'Ημερομηνία Μετακόμισης'];
+        $infoHeaderRow = ['Name', 'Phone', 'Εmail', 'Transport date'];
         $infoDataRow = array(
             $contactInfo["name"],
             $contactInfo["phone"],
@@ -75,7 +75,7 @@ class SubmitController extends Controller
 
         // create addresses csv
         $csvAddresses = new CsvWriter($submission->getFolder().'/addresses.csv');
-        $addressesHeaderRow = ['Οδός', 'Αριθμός', 'Περιοχή', 'Τύπος Κτιρίου', 'Όροφος'];
+        $addressesHeaderRow = ['Address', 'Number', 'City', 'Building type', 'Floor'];
         $csvAddresses->writeRow($addressesHeaderRow);
         $csvAddresses->writeRow($addressFrom);
         $csvAddresses->writeRow($addressTo);
@@ -86,7 +86,7 @@ class SubmitController extends Controller
 
         // create objects csv
         $csvObjects = new CsvWriter($submission->getFolder().'/objects.csv');
-        $objectsHeaderRow = ['Αντικείμενο', 'Κατηγορία', 'Ποσότητα'];
+        $objectsHeaderRow = ['Item', 'Category', 'Amount'];
         $csvObjects->writeRow($objectsHeaderRow);
         foreach ($userObjects as $key => $object) {
            $csvObjects->writeRow($object);
